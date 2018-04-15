@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+  <title>We Like Turtles - Information</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="shortcut icon" href="../images/turtle_clip_art.png">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+      $('.parallax').parallax();
+      $('.slider').slider();
+    });
+
+    // this is new for thumbnail photos slideshow
+    function swap(evt) {
+      // swap the current captin and image with the clicked thumbnail image and title
+      document.getElementById("image").src = this.getAttribute("href");
+      this.getAttribute("href");
+      document.getElementById("caption").firstChild.nodeValue = this.getAttribute("title");
+      if (evt.preventDefault) {
+        evt.preventDefault();
+      } else {
+        evt.returnValue = false;
+      }
+    }
+    window.onload = function() {
+      var imageLinks = document.getElementById("image_list").getElementsByTagName("a");
+
+      // Process image links
+      for (i = 0; i < imageLinks.length; i++) {
+        var linkNode = imageLinks[i];
+        // Attach event handler
+        linkNode.onclick = function(evt) {
+          // document.getElementById("image").src = this.getAttribute("href");
+          // document.getElementById("caption").firstChild.nodeValue = this.getAttribute("title");
+          document.getElementById("para").src = this.getAttribute("href");
+          document.getElementById("card_img_change").src = this.getAttribute("href");
+          document.getElementById("card_title_change").firstChild.nodeValue = this.getAttribute("title");
+
+
+          // Cancel the default action of the event
+          if (!evt) {
+            evt = window.event;
+          }
+          if (evt.preventDefault) {
+            evt.preventDefault();
+          } else {
+            evt.returnValue = false;
+          }
+        }
+        //move focus to the first thumbnail image
+        document.getElementById("first_link").focus();
+      }
+    }
+  </script>
+</head>
+
+<!-- Body of Page -->
+
+<body>
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <img src="../images/turtle_clip_art.png" class=brand-logo>
+      <a style="color:black;" href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <h2 id=title>Information</h2>
+    </div>
+  </nav>
+  <div class="parallax-container valign-wrapper">
+    <section id="gallery">
+      <p style="text-align:center; margin-left:10px;">Customize Background</p>
+      <ul style="margin-left: -30px;" id="image_list">
+        <li><a href="../images/10 painted_turtle.jpg" title="Painted Turtle" id="first_link">
+          <img src="../images/10 painted_turtle.jpg" width=60px height=40px alt=""></a></li>
+        <li><a href="../images/04 common_snapping_turtle.jpg" title="Common Snapping Turtle">
+          <img src="../images/04 common_snapping_turtle.jpg" width=60px height=40px alt=""></a></li>
+        <li><a href="../images/03 common_box_turtle.jpg" title="Common Box Turtle">
+          <img src="../images/03 common_box_turtle.jpg" width=60px height=40px alt=""></a></li>
+        <li><a href="../images/07 leatherback_sea_turtle.jpg" title="Leatherback Sea Turtle">
+          <img src="../images/07 leatherback_sea_turtle.jpg" width=60px height=40px alt=""></a></li>
+        <li><a href="../images/09 ornate_box_turtle.jpg" title="Ornate Box Turtle">
+          <img src="../images/09 ornate_box_turtle.jpg" width=60px height=40px alt=""></a></li>
+      </ul>
+    </section>
+    <div style="opacity:.15" class="parallax"><img id=para src="../images/multiple_green_sea_turtles.jpg"></div>
+    <div id="paragraph">
+      <p>Let’s start with the very basics about turtles. Turtles are animals belonging to the taxonomic order Testudines (also known as: Chelonia). They are classified as reptiles and they have shells that help to protect them from predators. Different types
+        of turtles can be found all over the globe, as turtles can live in many different types of climates. The fact that there are so many different types of turtles means that turtles belong to multiple suborders, families, genera, and species for
+        taxonomic classification purposes. However, the list below gives you an idea of the general Integrated Taxonomic Information System (ITIS) classification for turtles: Kingdom: Animalia Subkingdom: Bilateria Infrakingdom: Deuterostomia Phylum:
+        Chordata Subphylum: Vertebrata Infraphylum: Gnathostomata Superclass: Tetrapoda Class: Reptilia Order: Testudines (also called Chelonia) Suborders: Cryptodira and Pleurodira (turtles fall into both of these suborders) Families: Turtles belong
+        to 13 different families; for example, the family Dermochelyidae consists of leatherback sea turtles, while tortoises belong to the family Testudinidae Genera: Turtles can belong to any of 75 different genera Species: There are over 300 unique
+        species of turtles<br/><br/>Another important distinction is between turtles and similar reptiles that are often mistakenly referred to as “turtles” - tortoises and terrapins. Turtles themselves are animals that live primarily in water. In fact,
+        they only leave their aquatic habitats for specific purposes like bathing in the sun or laying eggs in the sand. Meanwhile, tortoises have special adaptations that make them land creatures rather than sea creatures. And, finally, terrapins lie
+        somewhere between turtles and tortoises in that they can live both on land and in the water, although they are distinct from both turtles and tortoises. <br/><br/>Different species of turtles can vary greatly in their appearance, size, and habitat
+        (we will explore some of our favorite types of turtles in more detail below). Turtles can be anywhere from a few inches long to over 6 feet in length and their weights can vary from about 5 ounces up to 1,500 pounds! Turtles live in such a wide
+        range of habitats that they can actually be found on every continent except for Antarctica.<br/><br/>Aside from their shells, turtles are probably best known for living very long lives. Certain types of sea turtles can live at least 60-70 years.
+        Tortoises can also live for a very extended period of time, as some species of giant tortoises have been known to live for more than 60 years in captivity. Rumors are often repeated of turtles living for well over one hundred years, although these
+        cases are very difficult to prove and many such claims are often doubted. Generally speaking, 100 years is at the very high end of the life span for all but a few species of turtles. <br/><br/>With all of this discussion of how long individual
+        turtles can live, you may be wondering how long turtles have been in existence as a whole. Well, being considered one of the most primitive reptiles in the world does have its advantages, as turtles have been around for millions of years. With
+        so many unique and beautiful species, we hope that these amazing creatures will stay around for at least a few million years more.
+      </p>
+    </div>
+  </div>
+  <!-- Starting of the cards -->
+  <div class=container>
+    <div class=row>
+      <div class="col l4 m4 s6">
+      </div>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img id=card_img_change class="activator" src="../images/10 painted_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span id=card_title_change class="card-title activator grey-text text-darken-4">Painted Turtle</span>
+            <p>Find more information about your customized background below</p>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s6">
+      </div>
+    </div>
+    <div class=row>
+      <h4>Our Favorites</h4>
+    </div>
+    <div class=row>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/10 painted_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Painted Turtle<i class="material-icons right">more_vert</i></span>
+            <p><a href="http://www.kidzone.ws/animal-facts/turtles/painted.htm ">Link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Painted Turtle<i class="material-icons right">close</i></span>
+            <p>No, this turtle didn’t find its way into a third grade art class, and it doesn’t have a degree in fine arts (at least we think. If this turtle does have any degrees, it sure is humble about it!). This turtle got its name from the multi-colored
+              pattern on its body and shell. Painted turtles vary in size depending on their sex. If the painted turtle is male, it can be between 5 and 20 centimeters! That may seem big, but the females can actually grow even bigger at up to 22 centimeters!
+              Female painted turtles lay their eggs in groups called clutches. They can lay between 6 and 20 eggs at any time! They lay their eggs one at a time, each in its own hole in the ground. In order to make sure the eggs stay moist, they wet the
+              holes with urine before laying their eggs. That may seem gross, but it’s motherly love at its finest!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/04 common_snapping_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Common Snapping Turtle<i class="material-icons right">more_vert</i></span>
+            <p><a href="https://srelherp.uga.edu/turtles/cheser.htm">Link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Common Snapping Turtle<i class="material-icons right">close</i></span>
+            <p>The common snapping turtle live throughout the eastern side of North America, in places such as South Carolina and Georgia.Their habitat is mainly bodies of fresh water, although some have been found in brackish water. They rarely bask in
+              the sun, meaning they spend most of their time in the water. Their large beak can strike with deadly strength, but they are normally very docile unless cornered or captured outside of water. They sometimes walk long distances along land,
+              leading to potential death by passing cars.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/03 common_box_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Common Box Turtle<i class="material-icons right">more_vert</i></span>
+            <p><a href="https://www.arkive.org/common-box-turtle/terrapene-carolina/">Link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Common Box Turtle<i class="material-icons right">close</i></span>
+            <p>The common box turtle is named after the box-like structure of its shell. This turtle has a hinged plastron (the lower shell), which allows it to create a defensive box out of its shell if it pulls its head and limbs inside. These turtles
+              tend to live in marshy meadows, floodplains, wooded areas, and grasslands.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=row>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/07 leatherback_sea_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Leatherback Sea Turtle<i class="material-icons right">more_vert</i></span>
+            <p><a href="https://conserveturtles.org/information-about-sea-turtles-leatherback-sea-turtle/">Link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Leatherback Sea Turtle<i class="material-icons right">close</i></span>
+            <p>The Leatherback Sea Turtle is named for its soft, shell-less back. They also have delicate, scissor-like jaws, which can be damaged by anything that doesn’t have a soft body. For this reason, their diet mainly consists of jellyfish. They live
+              in the open ocean, spanning all the way between Alaska and the Southern tip of Africa, but they feed mostly just off the shore. They are the only reptile known to be active at the low temperatures of below 40 degrees Fahrenheit. They lay
+              an average of 80 fertilized eggs each time they nest, which occurs between four to seven times per nesting season. Nesting seasons occur on intervals of one to two years. The fertilized eggs are the size of a billiard ball, and smaller,
+              unfertilized eggs are also laid in the same hole.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/09 ornate_box_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Ornate Box Turtle<i class="material-icons right">more_vert</i></span>
+            <p><a href="http://www.reptilesmagazine.com/Care-Sheets/Ornate-Box-Turtle/">Link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Ornate Box Turtle<i class="material-icons right">close</i></span>
+            <p>The Ornate Box Turtle is easily recognized by its dark brown shell with yellow markings originating from the upper posterior section of each costal shield. Their average lifespan is between 40 and 60 years! Like other box turtles, this turtle
+              is omnivorous. In the wild, they will hunt and consume grasshoppers, crickets, beetles, and earthworms. They will also eat low-growing vegetation, berries and mushrooms. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Starting of the other turtles below -->
+    <div class=row>
+      <h4>Some Others to Check Out!</h4>
+    </div>
+    <div class=row>
+
+      <div class="col l4 m4 s6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/03 common_box_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Common Box Turtle</span>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/06 green_sea_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Green Sea Turtle</span>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s6">
+        <div class="card small" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/08 loggerhead_sea_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Loggerhead Sea Turtle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=row>
+      <div class="col l4 m4 s6">
+        <div class="card" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/11 spotted_turtle.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Spotted Turtle</span>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s6">
+        <div class="card small" class=center>
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="../images/01 aldabra_giant_tortoise.JPG">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Aldabra Giant Tortoise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Footer-->
+  <footer id=footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Page Content</h5>
+          <p class="black-text text-lighten-4">Created by Jacob Brown, Elizabeth Barrord, David Black, William Holmes</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a style="color:black;" href="home.html">Home</a></li>
+            <li><a style="color:black;" href="information.html">Information</a></li>
+            <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+            <li><a style="color:black;" href="faq.html">FAQ</a></li>
+            <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+            <li><a style="color:black;" href="works-cited.html">Works-Cited</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <p>&copy; Copyright 2018 We Like Turtles</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

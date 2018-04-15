@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>We Like Turtles - Contact Us</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="shortcut icon" href="../images/turtle_clip_art.png">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+<!--    Form Validation CDNs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    
+  <script>
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+      $('.parallax').parallax();
+      $('select').material_select();
+        
+        //Move focus to first input box
+        $("#first_name").focus();
+        
+        //Form validation
+        $("#the_form").validate({
+            //Validation rules to apply (will be applied on top of curernt MaterializeCSS validation)
+            rules: {
+                first_name: {
+                    required:true
+                },
+                last_name: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                icon_prefix2: {
+                    required: true
+                },
+            },
+            errorElement : 'div',
+        errorPlacement: function(error, element) {
+          var placement = $(element).data('error');
+          if (placement) {
+            $(placement).append(error)
+          } else {
+            error.insertAfter(element);
+          }
+        }
+        })
+        
+    });
+  </script>
+</head>
+<!-- Body of Page -->
+<body>
+  <!-- The nav bar -->
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <img src="../images/turtle_clip_art.png" class=brand-logo>
+      <a style="color:black;" href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <h2 id=title>Contact Us</h2>
+    </div>
+  </nav>
+  <div class=container>
+    <div class=center>
+      <p>Please fill out the following form to contact us here at <i>We Like Turtles</i></p>
+    </div>
+  </div>
+  <!-- starting of the form -->
+    <div class=container id="contact_form">
+      <div class="row">
+        <form class="col s12" action="thankyou.html" method="get" id="the_form">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate" required>
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate" required>
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" required>
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s9">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="icon_prefix2" class="materialize-textarea validate" required></textarea>
+              <label for="icon_prefix2">Message</label>
+            </div>
+          </div>
+      </div>
+      <div style="z-index:3"class="row">
+        <div class="input-field col s12">
+          <select id="fav_turtle">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="galapagos">Galapagos Sea Turtle</option>
+              <option value="painted">Painted Turtle</option>
+              <option value="other">Other</option>
+            </select>
+            <label for="favorite_turtle">Favorite Turtle</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <footer id=footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Page Content</h5>
+          <p class="black-text text-lighten-4">Created by Jacob Brown, Elizabeth Barrord, David Black, William Holmes</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a style="color:black;" href="home.html">Home</a></li>
+            <li><a style="color:black;" href="information.html">Information</a></li>
+            <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+            <li><a style="color:black;" href="faq.html">FAQ</a></li>
+            <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+            <li><a style="color:black;" href="works-cited.html">Works-Cited</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <p>&copy; Copyright 2018 We Like Turtles</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

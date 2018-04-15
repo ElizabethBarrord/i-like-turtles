@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+  <title>We Like Turtles - Information</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="shortcut icon" href="../images/turtle_clip_art.png">
+
+ <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    $(".button-collapse").sideNav();
+    $('.parallax').parallax();
+    $('.slider').slider();
+  });
+    function toggle() {
+      if (this.getAttribute("class") == "plus") {
+        this.setAttribute("class", "minus");
+      } else {
+        this.setAttribute("class", "plus");
+      }
+      if (this.nextElementSibling.getAttribute("class") == "closed") { // if the text is hidden
+        this.nextElementSibling.setAttribute("class", "open");
+      } else {
+        this.nextElementSibling.setAttribute("class", "closed"); // change the text to hidden if it is already displayed
+      } // "this" specifies the element being clicked; .nectElementSibling specifies the next sibling (in this case, the content below the header)
+    }
+
+    window.onload = function() {
+      var h5s = document.getElementById("faqs").getElementsByTagName("h5");
+      for (var i = 0; i < h5s.length; i++) { // for every h5 within the faqs section
+        h5s[i].onclick = toggle; // run the toggle function when the header is clicked
+      }
+    }
+  </script>
+    
+ 
+
+</head>
+
+<!-- Body of Page -->
+
+<body>
+    <!-- The nav bar -->
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+      <img src="../images/turtle_clip_art.png" class=brand-logo>
+      <a style="color:black;" href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <h2 id=title>FAQ</h2>
+    </div>
+  </nav>
+      <div id=faqs>
+        <h5 class="plus">What is the difference between a tortoise and a turtle?</h5>
+        <!-- https://www.diffen.com/difference/Tortoise_vs_Turtle -->
+        <p class="closed">The main difference is that tortoises live entirely on land, whereas turtles live mostly in the ocean, but there are other differences as well. Notably, tortoises have bulkier and heavier shells, and usually live much longer than turtles.</p>
+
+        <h5 class="plus">Why is a painted turtle called a painted turtle?</h5>
+        <!-- http://www.kidzone.ws/animal-facts/turtles/painted.htm -->
+        <p class="closed">Good question. As you can see here,
+          <!-- include images or link -->painted turtles have long stripes running across their body in very distinct patterns, almost like someone painted them on; these are what give the painted turtle its name.</p>
+
+        <h5 class="plus">How much do you like turtles?</h5>
+        <!-- no URL required -->
+        <p class="closed">We don't <em>like</em>, we <em>love</em> turtles! We have stories upon stories of turtles! That's why we made this page all about turtles.</p>
+
+        <h5 class="plus">What does a pet turtle need to be happy?</h5>
+        <!-- https://www.petmd.com/reptile/care/evr_rp_how-to-take-care-of-pet-turtles -->
+        <!--If adding tortoisres, include the mention that tortoises need slightly different care (detailed in website) -->
+        <p class="closed">Much of what your turtle will need is going to depend on its species, so make sure you are familiar with its breed and diet; you should also try to tailor certain aspects of its habitat according to that species's preferences as well. More generally,
+          they will need a large terrarium with both water and land inside; make sure that the water is cleaned and changed regularly, and that both the air and water temperature are kept at what a wild turtle of your pet's species would find. Finally,
+          natural sunlight helps your turtle avoid certain health problems, so placement of the terrarium should be considered.</p>
+
+        <h5 class="plus">Are turtles actually slow, or is that just a false misconception?</h5>
+        <!--https://www.youtube.com/watch?v=i6nYWsXnl6M -->
+        <!--Include  -->
+        <p class="closed">The world record for the fastest tortoise is .92 feet per second. There is no known record for the world's fastest turtle.</p>
+        <!--Include a mention regarding turtles not needing to be fast if a better explanation cannot be found -->
+      </div>
+
+    <!--Footer-->
+    <footer id=footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Page Content</h5>
+            <p class="black-text text-lighten-4">Created by Jacob Brown, Elizabeth Barrord, David Black, William Holmes</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a style="color:black;" href="home.html">Home</a></li>
+              <li><a style="color:black;" href="information.html">Information</a></li>
+              <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+              <li><a style="color:black;" href="faq.html">FAQ</a></li>
+              <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+              <li><a style="color:black;" href="works-cited.html">Works-Cited</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <p>&copy; Copyright 2018 We Like Turtles</p>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

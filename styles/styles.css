@@ -1,0 +1,495 @@
+/* GENERAL */
+
+#paragraph {
+  padding: 10px 50px 1px 50px;
+  height: 400px;
+  overflow: scroll;
+  /* border-style: groove; */
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* General Page Layout */
+
+body {
+  background-color: lightgoldenrodyellow;
+  font-family: Verana, Arial, Helvetica, sans-serif;
+  line-height: 1.4em;
+  margin: 0px;
+}
+
+.container {
+  color: black;
+}
+
+/* For text-align */
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+/*********************************************/
+
+/* NAV BAR */
+
+/*********************************************/
+
+.nav-content {
+  height: 80px;
+}
+
+.nav-extended {
+  background-color: lightgreen;
+}
+
+/* img {
+    height: 400px;
+    width: 50%;
+    margin-left: 25%;
+} */
+
+.brand-logo {
+  height: 130px;
+  margin-top: 30px;
+  margin-left: 10px;
+    width: 200px;
+}
+
+/* title for navbar */
+
+#title {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/*********************************************/
+
+/* HOME PAGE */
+
+/*********************************************/
+
+h3#top_header {
+  font-size: 20px;
+}
+
+h3#enjoy {
+  font-size: 2em;
+  text-align: center;
+  color: green;
+}
+
+div#main_par {
+  padding: 10px 10px 0px 10px;
+  width: 100%;
+  align-content: center;
+  background-color: lightgoldenrodyellow;
+  line-height: 2;
+}
+
+#main_par p {
+  text-align: center;
+}
+
+hr {
+  background-color: black;
+  height: 3px;
+}
+
+
+
+#green_sea_turtle {
+  width: 800px;
+}
+/*using the code below messes up the turtle at the top of the page*/
+/*
+img {
+    height: 300px;
+    width: 50%;
+    padding-left: auto;
+    align-content: center;
+    align-items: center;
+}
+*/
+#image_slideshow {
+    height: 300px;
+    width: 50%;
+    padding-left: auto;
+    align-content: center;
+    align-items: center;
+    margin-left: 25%;
+}
+
+#image_list1 {
+    display: none;
+}
+
+/*
+#image {
+    height: 200px;
+    width: 50%;
+}
+
+#image_list li {
+    padding-left: 2200px;
+
+    height: 200px;
+    width: 50%;
+}
+
+#slideshow {
+    align-content: center;
+    height: 100px;
+    width: 100px;
+}
+*/
+
+/*********************************************/
+
+/* INFORMATION PAGE */
+
+/*********************************************/
+
+h4 {
+  text-align: center;
+}
+
+.card-small {
+  display: block;
+  margin: 15px;
+  float: left;
+  width: 300px;
+}
+
+#other_turtles {
+  padding: 10px 50px 1px 50px;
+  height: 628px;
+  overflow: scroll;
+  margin-top: 10px;
+}
+
+.center {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Create three equal columns that floats next to each other */
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.activator {
+  height: 200px;
+}
+
+.card-title {
+  height: 50px;
+}
+
+.side-bar {
+  line-height: 4;
+  text-align: left;
+  margin-left: 100px;
+}
+
+aside {
+  padding: 0px 0px 0px 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+aside h2 {
+  padding: 0px 0px 0px 0px;
+  color: black;
+  font-size: 20px;
+}
+
+aside section a:hover {
+  color: blue;
+}
+
+/* THIS IS NEW FOR THUMNAIL PHOTOS */
+#gallery {
+    float: left;
+    width: 659px;
+    border-right: 1px solid #eeeeee;}
+
+h1 {
+	font-size: 120%;
+    font-family: "Century Gothic", sans-serif;
+    padding-left: 60px;
+    padding-bottom: 0px;
+}
+
+h2 {
+	font-size: 100%;
+	padding: .25em 0 0 60px;
+    font-family: "Gill Sans MT", sans-serif;
+	cursor: pointer;
+    padding-bottom: 0px;
+}
+
+#image_list {
+	padding-left: 60px;
+}
+
+li {
+    padding-right: 10px;
+    display: inline;
+}
+/* p {
+	padding-left: 60px;
+} */
+
+/*********************************************/
+
+/* CONTACT US PAGE */
+
+/*********************************************/
+
+/* the turtle on the contact page */
+
+#contact_form {
+  width: 800px;
+  height: 600px;
+}
+
+/*********************************************/
+
+/* THANK YOU PAGE */
+
+/*********************************************/
+
+/* Thank You Page Specific body*/
+
+body.thank_you {
+  background-color: lightgoldenrodyellow;
+}
+
+/* Thank you html, for visitng our site ONLY*/
+
+hgroup h1 {
+  float: none;
+  text-align: center;
+  color: green;
+  font-size: 46px;
+}
+
+/*********************************************/
+
+/* FAQ PAGE */
+
+/*********************************************/
+
+#faqs {
+  margin: 50px;
+  text-align: left;
+  height: 450px;
+  line-height: 1.15;
+  overflow: scroll;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+h5.plus {
+	background: url(../images/plus.png) no-repeat left center;
+    padding: .25em 0 .25em 25px;
+    
+}
+h5.minus {
+	background: url(../images/minus.png) no-repeat left center;
+    padding: .25em 0 .25em 25px;
+}
+
+p.closed {
+    display: none;
+}
+p.open {
+    display: block;
+}
+
+/*********************************************/
+
+/* FOOTER */
+
+/*********************************************/
+
+.page-footer {
+  background-color: black;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-copyright {
+  background-color: black;
+}
+
+#footer {
+  background-color: lightgreen;
+}
+
+#footercp {
+  background-color: #b6e1b8;
+}
+
+h5.black-text {
+  text-align: left;
+}
+
+/*********************************************/
+
+/* CONTACT US */
+
+/*********************************************/
+
+/* Form Style */
+
+label {
+  color: green;
+  text-decoration: underline;
+  float: left;
+  text-align: left;
+  width: 100pt;
+}
+
+input.submit {
+  margin-top: 8pt;
+}
+
+input {
+  margin-bottom: 4pt;
+}
+
+textarea {
+  margin-bottom: 4pt;
+}
+
+legend {
+  color: green;
+  font-weight: bold;
+}
+
+/*********************************************/
+
+/* TURTLE CALCULATOR */
+
+/*********************************************/
+
+#calculator_form {
+    width: 800px;
+    margin: 10px auto;
+}
+
+#calculator_form label {
+    width: 18em;
+    font-size: .9em;
+    text-align: right;
+    float: left;
+    margin-top: 8px;
+}
+
+#calculator_form .text {
+    display: inline;
+    width: 500px;
+    margin-left: 25px;
+    padding: 0px;
+}
+
+#calculator_form #buttons {
+    margin: 0px auto;
+    width: 400px;
+    margin-left: 18em;
+}
+
+#calculator_form .button {
+    margin-left: 20px;
+    padding: 2px;
+}
+
+#calculator_form label {
+
+}
+
+/*********************************************/
+
+/* Works Cited */
+
+/*********************************************/
+
+#works_cited {
+  text-align: center;
+  height: 450px;
+  line-height: 4;
+  overflow: scroll;
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+}
+
+/*********************************************/
+
+/* MEDIA ADJUSTMENTS */
+
+/*********************************************/
+
+/*Adjust for Tablet Sized Screen*/
+
+@media (min-width: 481px) and (max-width: 1000px) {
+  /* Adjust background color brightness so tablet users can see the screen more easily if they are outside*/
+  body {
+    background-color: cadetblue;
+  }
+  div#main_par {
+    background-color: cadetblue;
+  }
+  body.thank-you {
+    background-color: cadetblue;
+  }
+  #contact_form, #calculator_form {
+    background-color: lightgoldenrodyellow
+  }
+}
+
+/*Adjust for Phone Sized Screen*/
+
+@media (max-width: 480px) {
+  /* Adjust background color brightness so smartphone users can see the screen more easily if they are outside*/
+  body {
+    background-color: aqua;
+  }
+  div#main_par {
+    background-color: aqua;
+  }
+  body.thank-you {
+    background-color: aqua;
+  }
+  #contact_form, #calculator_form {
+    background-color: lightgoldenrodyellow
+  }
+}

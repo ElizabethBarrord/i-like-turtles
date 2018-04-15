@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>We Like Turtles - Home</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="shortcut icon" href="../images/turtle_clip_art.png">
+
+  <title>We Like Turtles - Information</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="shortcut icon" href="../images/turtle_clip_art.png">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+      //Slideshow loading code
+      window.onload = function() {
+           var links =  document.getElementById("image_list1").getElementsByTagName("a"); //a,a,a,a,a
+            // allows us to create a loop
+            var counter = 0;
+            var timer = setInterval( function() {
+                counter = (counter + 1)%links.length;
+                document.getElementById("image_slideshow").src = links[counter].href;
+                document.getElementById("caption").innerHTML = links[counter].title;
+            } , 2000 )
+        }
+      
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+//      $('.parallax').parallax();
+    });
+  </script>
+</head>
+<!--Body of Page-->
+
+<body>
+    
+    <!-- The nav bar -->
+    <nav class="nav-extended">
+      <div class="nav-wrapper">
+        <img src="../images/turtle_clip_art.png" class=brand-logo>
+        <a style="color:black;" href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a style="color:black;" href="home.html">Home</a></li>
+          <li><a style="color:black;" href="information.html">Information</a></li>
+          <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+          <li><a style="color:black;" href="faq.html">FAQ</a></li>
+          <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a style="color:black;" href="home.html">Home</a></li>
+          <li><a style="color:black;" href="information.html">Information</a></li>
+          <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+          <li><a style="color:black;" href="faq.html">FAQ</a></li>
+          <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+        </ul>
+      </div>
+      <div class="nav-content">
+        <h2 id=title>Home</h2>
+      </div>
+    </nav>
+    <!--    Main Body -->
+
+    <div class=container>
+        <h3 id="top_header">Answer all of the turtle questions you'll ever have at <i>We Like Turtles</i>!</h3>
+        <div id="main_par" class=center>
+          <p>We Like Turtles is a website designed to provide high quality information about turtles to its users. We have researched the most interesting turtle information on the web and put it all together in one website. Please view <a href="information.html">our information</a>          and ask us a question today! Also, please take a look at the slideshow below that shows images of some of our favorite turtles!</p>
+        </div>
+    </div>
+    <div>
+<!-- Slide show -->
+        <ul id="image_list1">
+            <li><a href="../images/multiple_green_sea_turtles.jpg" title="Green Sea Turtles" id = "slideshow"></a></li>
+            <li><a href="../images/10%20painted_turtle.jpg" title="Painted Turtle" id = "slideshow"></a></li>
+            <li><a href="../images/11%20spotted_turtle.jpg" title="Spotted Turtle" id = "slideshow"></a></li>
+            <li><a href="../images/09%20ornate_box_turtle.jpg" title="Ornate Box Turtle" id = "slideshow"></a></li>
+            <li><a href="../images/05%20galapagos_giant_tortoise.png" title="Galapagos Giant Tortoise" id = "slideshow"></a></li>       
+        </ul>
+        <h4 id="caption">Green Sea Turtles</h4>
+            <p>
+    	<img src="../images/multiple_green_sea_turtles.jpg" alt="" id="image_slideshow">
+            </p>
+<!--        </section>-->
+    </div>
+    <!--Parallax code -->
+    <!--
+    <div class="parallax-container valign-wrapper">
+      <div class="parallax"><img src="../images/multiple_green_sea_turtles.jpg"></div>
+    </div>
+-->
+
+    <!--Footer-->
+    <footer id=footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Page Content</h5>
+            <p class="black-text text-lighten-4">Created by Jacob Brown, Elizabeth Barrord, David Black, William Holmes</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a style="color:black;" href="home.html">Home</a></li>
+              <li><a style="color:black;" href="information.html">Information</a></li>
+              <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+              <li><a style="color:black;" href="faq.html">FAQ</a></li>
+              <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+              <li><a style="color:black;" href="works-cited.html">Works-Cited</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <p>&copy; Copyright 2018 We Like Turtles</p>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

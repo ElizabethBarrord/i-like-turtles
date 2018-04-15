@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>We Like Turtles - Turtle Calculator</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="shortcut icon" href="../images/turtle_clip_art.png">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $(".button-collapse").sideNav();
+    $('.parallax').parallax();
+    $('.slider').slider();
+  });
+  </script>
+    <script>
+        //all variables must be global so a user can click the calculate button multiple times and their values will still be saved
+        var counter = 0;
+        var numTurtles = 0;
+        var matureTurtles = 0;
+        var immatureTurtlesBySeason = [];
+        var jumpSeasons = 0;
+        
+        var addSeason = function() {
+            //Give user multiple messages if starting turtle value is invalid
+            if (isNaN(document.getElementById("start_turtles").value) || document.getElementById("start_turtles").value < 2) {
+                document.getElementById("end_turtles").value = "You must start with at least 2 turtles!";
+                alert("Please enter a valid number of turtles that is greater than or equal to 2 to begin.")
+                document.getElementById("start_turtles").focus();
+            }
+            //Give user multiple messages if jump seasons value is invalid
+            else if (isNaN(document.getElementById("jump_seasons").value) || document.getElementById("jump_seasons").value < 1) {
+                document.getElementById("end_turtles").value = "You must add at least 1 season!";
+                alert("Please enter a valid number of seasons to add that is greater than or equal to 1 to begin.")
+                document.getElementById("jump_seasons").focus();
+            }
+            //If jump seasons and number of turtles are both valid
+            else {
+                jumpSeasons = parseInt(document.getElementById("jump_seasons").value);
+                //Perform calculations for every season
+                for (i = 1; i <= jumpSeasons; i++) {
+                    counter++;
+                    if (counter == 1) {
+                        //In the first season ONLY, the number of turtles will be the user-entered value
+                        numTurtles = parseInt(document.getElementById("start_turtles").value);
+                        //In the first season ONLY, the number of mature turtles will exactly equal the number of total turtles
+                        matureTurtles = numTurtles;
+                    }
+                    //After 20 seasons, more turtles will start becoming sexually mature and will be able to reproduce each year
+                    else if (counter>=20) {
+                        //The number of mature turtles should increase by the number of turtles born 20 seasons ago
+                        matureTurtles += immatureTurtlesBySeason[counter-20];
+                    }
+                    //The number of immature turtles born this season should increase, considering that each pair of turtles
+                    //can mate to produce 100 eggs, 10% of which will survive
+                    immatureTurtlesBySeason[counter-1] = parseInt(parseInt(matureTurtles / 2) * 100 * .1);
+                    //The number of total turtles should increase by the number of turtles born this season
+                    numTurtles += immatureTurtlesBySeason[counter-1];
+                }
+                //Display results
+                document.getElementById("end_turtles").value = ("There will be " + numTurtles + " turtles after " + counter + " season(s)");
+                //Disable the value of the starting turtles input box since the user's input will no longer be used in the calculations after the button has been clicked the first time
+                document.getElementById("start_turtles").setAttribute("disabled","");
+            }
+        }
+
+        var startOver = function() {
+            //clear the input boxes
+            document.getElementById("start_turtles").value = "";
+            document.getElementById("end_turtles").value = "";
+            document.getElementById("jump_seasons").value = 1;
+            //reset all of the variables
+            counter = 0;
+            numTurtles = 0;
+            matureTurtles = 0;
+            immatureTurtlesBySeason = [];
+            //enable user entry in the start_turtles input box
+            document.getElementById("start_turtles").removeAttribute("disabled");
+            document.getElementById("start_turtles").focus();
+        }
+
+        window.onload = function() {
+            document.getElementById("add_season").onclick = addSeason;
+            document.getElementById("reset").onclick = startOver;
+            document.getElementById("jump_seasons").value = 1; //default value for seasons to jump
+            document.getElementById("start_turtles").focus();
+        }
+
+
+
+    </script>
+</head>
+<!-- Body of Page -->
+<body>
+  <!-- The nav bar -->
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <img src="../images/turtle_clip_art.png" class=brand-logo>
+      <a style="color:black;" href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a style="color:black;" href="home.html">Home</a></li>
+        <li><a style="color:black;" href="information.html">Information</a></li>
+        <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+        <li><a style="color:black;" href="faq.html">FAQ</a></li>
+        <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <h2 id=title>Turtle Calculator</h2>
+    </div>
+  </nav>
+  <div class=container>
+    <div class=center>
+        <p>A turtle's nesting season is every 2-3 years. At this time, female turtles lay approximately 100 eggs on average (the actual number can vary greatly from turtle to turtle), but only about 10% of the eggs laid by a female turtle in a given season will end up surviving and reaching maturity. Once a new turtle is born, that turtle will reach sexual maturity in roughly 20 nesting seasons, meaning that in 20 nesting seasons it will begin reproducing on its own.
+
+            <br><br> Use the calculator below to choose a number of starting turtles and a number of seasons to add to your current calculation, and the calculator will track how many total turtles there will be after the additional seasons have happened. Notice that the number of turtles will begin to grow more rapidly after 20 seasons as new turtles reach maturity and begin reproducing! The calculator assumes that turtles, once mature, will continue to reproduce indefinitely. The calculations build on themselves, so you can choose a number of starting turtles and track how they multiply over time!
+
+            <br><br>(Please Note: Different types of turtles reproduce in different ways, so we have used the reproduction process for loggerhead turtles for the purposes of this calculator.)</p>
+    </div>
+  </div>
+  <!-- starting of the form -->
+    <form action="thankyou.html" method="get" id="calculator_form">
+        <fieldset>
+            <legend>Turtle Calculator</legend>
+            <label>Number of Starting Turtles: </label>
+            <input class="text" type="text" id="start_turtles">
+            <br> <br>
+            <label>Number of Seasons to Add: </label>
+            <input class="text" type="text" id="jump_seasons">
+            <br> <br>
+            <div id="buttons">
+            <input class="button" id="add_season" type="button" value="Add Season(s)">
+            <input class="button" id="reset" type="button" value="Start Over">
+            </div> <br>
+            <label>Number of Turtles at End of Season: </label>
+            <input class="text" type="text" id="end_turtles" disabled>
+            <br>
+        </fieldset>
+    </form>
+
+
+  <!-- Footer section -->
+  <footer id=footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Page Content</h5>
+          <p class="black-text text-lighten-4">Created by Jacob Brown, Elizabeth Barrord, David Black, William Holmes</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a style="color:black;" href="home.html">Home</a></li>
+            <li><a style="color:black;" href="information.html">Information</a></li>
+            <li><a style="color:black;" href="contact-us.html">Contact-us</a></li>
+            <li><a style="color:black;" href="faq.html">FAQ</a></li>
+            <li><a style="color:black;" href="turtle-calculator.html">Turtle Calculator</a></li>
+            <li><a style="color:black;" href="works-cited.html">Works-Cited</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <p>&copy; Copyright 2018 We Like Turtles</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
